@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poke Card Game</title>
+  
+  <link rel="stylesheet" href="style.css"><!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <!-- popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- import Bootstrap css and js-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <header class="container">
+        <h1>Pokemon Memory Card Game</h1>
+    </header>
+    <div class="container">
+        <div class="btn-group" role="group">
+            <button class="btn btn-outline-secondary difficulty active" id="easy">Easy</button>
+            <button class="btn btn-outline-secondary difficulty" id="medium">Medium</button>
+            <button class="btn btn-outline-secondary difficulty" id="hard">Hard</button>
+        </div>
+    </div>
+    <div class="container">
+        <button id="start-button" class="btn btn-outline-secondary">Start</button>
+        <button id="reset-button" class="btn btn-outline-secondary">Reset</button>
+    </div>
+    <div id="game-stats" class="container"></div>
+    <div class="game-board-container">
+        <div id="game-board" class="row"></div>
+        <div id="mode-toggle-container"></div>
+    </div>
+</body>
+</html>

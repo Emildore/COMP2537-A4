@@ -1,0 +1,94 @@
+#game-board {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--card-back-color-light);
+  }
+  
+  .card {
+    perspective: 1000px;
+    border: none !important;
+    width: auto;
+    height: auto;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:not(.flipped) .flip-card-inner {
+    transform: rotateY(0deg);
+  }
+  
+  .card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+  }
+  
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: var(--card-back-color-light);
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+    
+  }
+  
+  :root {
+    --card-back-color-light: #fff; /* White for light mode */
+    --card-back-color-dark: #000; /* Black for dark mode */
+}
+  
+  .game-over {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .game-board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .btn-group .btn {
+    margin-right: 10px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
