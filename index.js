@@ -204,6 +204,10 @@ $(document).ready(function() {
     }
   
     function handleCardClick() {
+
+    console.log('clicked' + clickCount);
+    console.log('last matched at click count' + lastMatchedAtClickCount);
+
       if (elapsedTime >= timeLimit) {
         return;
       }
@@ -293,6 +297,7 @@ $(document).ready(function() {
       matchedPairs = 0;
       clickCount = 0;
       elapsedTime = 0;
+      lastMatchedAtClickCount = 0; 
       updateHeader();
       $('#game-stats').empty();
       $('#start-button').show();
